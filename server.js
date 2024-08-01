@@ -19,7 +19,6 @@ app.use(express.static('public'));
 
 app.post('/create-checkout-session', async (req, res) => {
   const { walletAddress, usdAmount } = req.body;
-  localStorage.setItem('walletAddress', walletAddress);
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],

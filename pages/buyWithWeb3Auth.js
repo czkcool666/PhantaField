@@ -34,7 +34,7 @@ export const buyWithWeb3Auth = async (usdAmount) => {
   }
 };
 
-const mintNFTWithStripe = async (nftPrice) => {
+const mintNFTWithStripe = async () => {
   try {
 
     const { web3auth  } = await initializeWeb3Auth();
