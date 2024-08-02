@@ -13,6 +13,8 @@ const serverUrl = 'http://localhost:4242'; // Update this to your server URL
 
 export const buyWithWeb3Auth = async (usdAmount) => {
   try {
+
+    localStorage.setItem('loginMethod', 'web3auth');
     // Retrieve wallet address from local storage
     const walletAddress = localStorage.getItem('web3authWalletAddress');
 
